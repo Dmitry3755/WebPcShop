@@ -1,25 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useEffect, useState } from 'react';
+import NavBar from './components/NavBar'
+import Footer from './components/Footer'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  const [hidden, Set_hidden] = useState(true);
+  const handleClick = () =>{
+    Set_hidden(!hidden);
+  
+  }
 
+return (
+<div>
+      <NavBar></NavBar>
+      <Footer></Footer>
+    </div>
+       );
+}
 export default App;
